@@ -5,7 +5,7 @@
  UI for Users to add, delete, edit articles. 
  Different categories, articles will be added to the given category section.
  
- Models
+ #Database tables 
  
  App has 3 models 
  News - all news are saved to this model
