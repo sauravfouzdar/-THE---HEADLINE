@@ -1,0 +1,53 @@
+{% extends 'back/master.html'%}
+{% block mainblock %}
+{% load static %}
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+<!-- /script-for sticky-nav -->
+<!--inner block start here-->
+<div class="inner-block">
+    <div class="product-block">
+    	<div class="pro-head">
+    		<h2>Add category</h2>
+            
+            <!----------Form -------->
+        
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" method="post" action="{% url 'add_category' %}">
+               {% csrf_token %}
+    <p class="h4 mb-4">Add category</p>
+
+    <!-- Name -->
+    <input type="text" id="cat" name="cat" method="post" class="form-control mb-4" placeholder="category of news"><br/>
+
+   
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit" value="add">Add</button>
+
+</form>
+
+<!-- Default form contact -->
+
+    	</div>
+
+   <div class="clearfix"> </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+

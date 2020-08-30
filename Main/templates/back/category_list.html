@@ -1,0 +1,98 @@
+{% extends 'back/master.html'%}
+
+
+{% block mainblock %}
+{% load static %}
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+<!-- /script-for sticky-nav -->
+<!--inner block start here-->
+<div class="inner-block">
+    <div class="product-block">
+    	<div class="pro-head">
+    		<h2>Cateory list <br>Edit,Delete or Add category</h2>
+            
+    	</div>
+
+<!----------------------Table------------------------------>
+
+        <script>
+    	$(document).ready(function () {
+  $('#dtBasicExample').DataTable({
+    "pagingType": "numbers"});
+  $('.dataTables_length').addClass('bs-select');
+});
+   
+    </script>
+
+<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">Id
+
+      </th>
+      
+      <th class="th-sm">Title
+
+      </th>
+     
+      <th class="th-sm">Action
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+        {% for row in cat %}
+    <tr>
+      <td>{{row.pk}}</td>
+    
+      <td>{{row.name}}</td>
+      
+      <td class ="text-center">
+      <div class="btn-group">
+      <a href ="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil">Edit</i></a>
+      <a href ="#" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-default"><i class="fa fa-times">Delete</i></a>
+
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Id
+      </th>
+     
+      <th>Title
+      </th>
+     
+    
+      <th>Action
+      </th>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+    
+      <div class="clearfix"> </div>
+    </div>
+</div>
+<!--inner block end here-->
+
+
+
+{% endblock %}

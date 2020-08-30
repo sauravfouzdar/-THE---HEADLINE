@@ -1,0 +1,72 @@
+{% extends 'front/base.html' %} {% block headblock %}
+<title> {{ site.Name }} About</title>
+{% endblock %} {% block mainblock%} {% for j in cat %} {% if j.cat_name == "Business" %}
+<div id="block-sectionpagegroup" class="row">
+
+
+    <div class="views-element-container col-md-9" id="block-views-block-section-page-block-1">
+
+
+        <div>
+            <div class="row col-sm-12 maincontent js-view-dom-id-cceb990f18fd272293c37b3442d7a88f2abdb03be166bfeaa785938d608658cc">
+
+
+                <div class="new-widget-type-view-8 mbl-view clearfix" style="margin-left: 180px;">
+                    <div class="list-holder">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media-holder">
+                                    <div class="img-holder">
+                                        <a href="/news/{{j.pk}}">
+                                            <div class="img-place-holder">
+
+                                                <img class="img-responsive" src="//cdn.wionews.com/sites/default/files/styles/medium/public/2020/05/20/141254-whatsapp-image-2020-05-20-at-201600.jpeg?itok=q-1nnlcN" width="220" height="165" alt="Vande Bharat Mission" typeof="Image" />
+
+                                            </div>
+                                        </a>
+                                        <div class="new-icon-overlay">
+                                            <p class="icon-links">
+                                                <span class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.wionews.com/india-news/nearly-900000-indians-have-returned-from-abroad-under-vande-bharat-mission-mea-317099" data-a2a-title="Nearly 900,000 Indians have returned from abroad under Vande Bharat Mission: MEA"><a
+                                                        class="a2a_button_whatsapp visible-xs visible-sm pull-left"></a><a
+                                                        class="a2a_button_facebook"></a><a
+                                                        class="a2a_button_twitter"></a><a
+                                                        class="a2a_button_linkedin"></a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="content-holder">
+                                    <h2>
+                                        <a href="/news/{{j.pk}}" hreflang="en">{{j.title_of_news}}</a>
+                                    </h2>
+                                    <div class="date-author-loc clearfix hidden-xs">
+                                        <ul>
+                                            <li>{{j.timestamp}}</li>
+                                            <li class="">New Delhi, Delhi, India</li>
+                                        </ul>
+                                    </div>
+
+                                    <p><u style="color: burlywood;">The phase 5 of the Vande Bharat Mission will start
+                                            from August 1, the MEA said </u>
+                                    </p>
+
+                                    <p class="by-author hidden-xs hide"></p>
+                                    <a href="/news/{{j.pk}}" class="list-more">Read Article
+                                        <span>→</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br> {% endif %} {% endfor %} {% endblock %}
