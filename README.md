@@ -1,7 +1,7 @@
 # THE---HEADLINE
  Blog Web Application in Django, where user can upload articles.
- Functionalities
  
+# Functionalities
  UI for Users to add, delete, edit articles. 
  Different categories, articles will be added to the given category section.
  
