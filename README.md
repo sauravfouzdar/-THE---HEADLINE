@@ -8,7 +8,7 @@
 # Database tables 
  
  @App has 3 models         
- News - all news are saved to this model
- categories - to add new category 
+  @News - all news are saved to this model | 
+  @categories - to add new category |
  main - to dynamically change social media accounts, contact number, about us page from Django admin section
  
