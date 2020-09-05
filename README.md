@@ -1,4 +1,4 @@
-# THE---HEADLINE
+# NOTIFy
  Notification Web Application in Python(Django), with CRUD features.
  
 # Functionalities
